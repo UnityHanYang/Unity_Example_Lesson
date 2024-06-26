@@ -4,10 +4,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-<<<<<<< HEAD
-using static UnityEditor.Progress;
-=======
->>>>>>> 4ee7f07f8b45d425ccc575429dfe3eec5e60c6f3
 
 public class SkillInventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -39,7 +35,6 @@ public class SkillInventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler
 
     public bool TrySwap(Skill skill)
     {
-<<<<<<< HEAD
         if (skill is Skill && hasItem)
         {
             if (this.skill is Skill)
@@ -48,8 +43,6 @@ public class SkillInventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler
             }
             else return false;
         }
-=======
->>>>>>> 4ee7f07f8b45d425ccc575429dfe3eec5e60c6f3
         return true;
     }
     public bool hasItem { get { return skill != null; } }
@@ -81,11 +74,6 @@ public class SkillInventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler
         {
             return;
         }
-<<<<<<< HEAD
-
-=======
-        //print(SkillInventoryManager.Instance.focusedSlot);
->>>>>>> 4ee7f07f8b45d425ccc575429dfe3eec5e60c6f3
         if (SkillInventoryManager.Instance.focusedSlot != this && SkillInventoryManager.Instance.focusedSlot != null)
         {
             SkillInventorySlot targetSlot = SkillInventoryManager.Instance.focusedSlot;
@@ -93,11 +81,8 @@ public class SkillInventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler
             {
                 Skill tempItem = targetSlot.Skill_P;
                 targetSlot.Skill_P = skill;
-<<<<<<< HEAD
                 this.Skill_P = tempItem;
-=======
                 this.skill = tempItem;
->>>>>>> 4ee7f07f8b45d425ccc575429dfe3eec5e60c6f3
             }
         }
 
@@ -107,13 +92,10 @@ public class SkillInventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler
         iconImage.rectTransform.anchoredPosition = Vector2.zero;
 
     }
-<<<<<<< HEAD
-=======
     private void Update()
     {
         print(SkillInventoryManager.Instance.focusedSlot);
     }
->>>>>>> 4ee7f07f8b45d425ccc575429dfe3eec5e60c6f3
     public void OnPointerEnter(PointerEventData eventData)
     {
         SkillInventoryManager.Instance.focusedSlot = this;

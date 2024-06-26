@@ -8,11 +8,7 @@ using UnityEngine.UI;
 //호출 주체 : EventSystem
 public class InventorySlot : MonoBehaviour,
 	IDragHandler, IBeginDragHandler, IEndDragHandler
-<<<<<<< HEAD
 	,IPointerEnterHandler, IPointerExitHandler
-=======
-	//,IPointerEnterHandler, IPointerExitHandler
->>>>>>> 4ee7f07f8b45d425ccc575429dfe3eec5e60c6f3
 	{
 
     public Image iconImage;
